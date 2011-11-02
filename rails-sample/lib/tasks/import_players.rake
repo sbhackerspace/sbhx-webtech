@@ -26,7 +26,7 @@ task :import_allstars => :environment do
   csv_text = CSV.read('lahman58-csv/Allstar.csv')
   csv_text.each do |row|
 
-    player = Player.where(:player_id => row[0])
+    player = Player.where(:player_id => row[0]).first
     year = row[1]
     league = row[2]
 

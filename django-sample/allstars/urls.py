@@ -14,4 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^allstars/$', 'players.views.allstar_list', name='allstar_list'),
+    url(r'^allstars/(?P<year>\d{4})/$', 'players.views.allstar_roster', name='allstar_roster')
+
 )

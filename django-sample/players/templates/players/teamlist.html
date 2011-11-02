@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+
+{% block page_class %}home-page{% endblock %}
+
+{% block content %}
+   <h1>{% trans "AllStar Teams" %}</h1>
+    <ul>
+   {% for team in teams %}
+   <li><a href='{% url 'allstar_roster' team %}'>{{ team }}</a></li>
+   {% endfor %}
+   </ul>
+{% endblock %}

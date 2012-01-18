@@ -1,9 +1,17 @@
-SB Hackerspace's Intro to Django
-================================
+SB Hackerspace's
+===============
+<br />
+#Intro to Django
 
-Presentator: AJ Bahnken
-Co-Presentator: Steve Phillips
-Presented: Jan 18, 2012 @ SB Hackerspace
+---
+
+<br />
+##Presentor: AJ Bahnken
+<br />
+##Co-Presentor: Steve Phillips
+<br />
+##Presented: Jan 18, 2012 @ SB Hackerspace
+<br />
 
 ---
 
@@ -19,7 +27,7 @@ Presented: Jan 18, 2012 @ SB Hackerspace
 
  - This is only a basic introduction to Django.
  - There are a lot of ways to do a single thing.
- - I recommend looking at more than one Intro to Django tutorials.
+ - I recommend looking at more than one Intro to Django tutorial.
 ---
 
 ##What is Django?
@@ -44,7 +52,7 @@ apps.
 
 ---
 
-##Why 'MVC (kinda)' and WTF does MVC mean?
+##Why 'MVC (kinda)'?
 
 MVC stands for 'Model View Controller', and it is
 an architectural pattern of software design. Django 
@@ -61,11 +69,12 @@ controls 'how', and the Views control 'what'.
 
 Some with a lot of traffic:
 
- - [Disqus](http://disqus.com/) -- online discussion and commenting service for websites and online communities.
+ - [Disqus](http://disqus.com/) -- online discussion and commenting service for websites and online communities. (500 Million monthly users)
  - [Bitbucket](https://bitbucket.org/) -- a web-based hosting service for projects that use either the Mercurial or Git revision control systems.
  - [Giant Bomb](http://www.giantbomb.com/) -- (lame) Video Game Reviewing site
  - [User Echo](http://userecho.com/) -- a site for user to owner communication. Feedback, etc.
  - [The Onion](http://www.theonion.com/) -- greatest news network ever, of course.
+ - [Washington Post](washingtonpost.com)
 
 ---
 
@@ -77,7 +86,7 @@ Some with a lot of traffic:
 
 ##VirtualEnv
 
-VirtualEnvWrapper allows you to setup a seperate
+VirtualEnvWrapper allows you to setup a separate
 enviorment for development and production so you can
 have different versions of softwares (such as Django)
 on one machine. This makes sure you don't break everything.
@@ -101,8 +110,9 @@ with awesome as my window manager, urxvt+byobu as my terminal emulator, and vim 
     django-admin.py startproject 'project_name'
 
 ##This generates a folder with:
-
-##'__init__.py'
+    
+    !bash
+    __init__.py
 
 Makes the folder a package, which allows it to
 be callable within a terminal. Important.
@@ -183,34 +193,66 @@ While you are in your folder:
     python manage.py startapp 'app_name'
 
 This will create a folder with
-
- - '__init__.py'
- - tests.py
+    
+    !bash
+    __init__.py
+    tests.py
 
 A file for creating and running unittests and doctests.
 (We probably won't cover this that much in this talk)
 
 ---
 
-##Along with
- 
- - models.py
+##models.py
 
-Python Classes that outline and define what data
-will be stored. Basically your database layout.
+Python Classes that outline and define the structure of the data
+that will be stored. Basically your database layout.
 
- - views.py
+    !python
+    class Publisher(models.Model):
+        name = models.CharField(max_length=30)
+        address = models.CharField(max_length=50)
+        city = models.CharField(max_length=60)
+        state_province = models.CharField(max_length=30)
+        country = models.CharField(max_length=50)
+        website = models.URLField()
+    
+    class Author(models.Model):
+        first_name = models.CharField(max_length=30)
+        last_name = models.CharField(max_length=40)
+        email = models.EmailField()
+                
+    class Book(models.Model):
+        title = models.CharField(max_length=100)
+        authors = models.ManyToManyField(Author)
+        publisher = models.ForeignKey(Publisher)
+        publication_date = models.DateField()
+
+
+
+---
+
+#views.py
 
 The main functionality of your App. This utilizes each Model,
 along with determining what data is displayed.
 
+    !python
+    from django.shortcuts import render_to_response
+    import datetime
+
+    def hello(request):
+        return HttpResponse("Hello world")
+
+    def current_datetime(request):
+        current_date = datetime.datetime.now()
+        return render_to_response('current_datetime.html', locals())
+
+
+
 ---
 
 #Lets take a look at the code...
-
---
-
-#Questions yo?
 
 ---
 
@@ -220,3 +262,4 @@ along with determining what data is displayed.
  - http://en.wikipedia.org/wiki/Django
  - http://jeffcroft.com/blog/2007/jan/11/django-and-mtv/
  - http://www.djangosites.org/
+ - http://www.slideshare.net/zeeg/pycon-2011-scaling-disqus-7251315

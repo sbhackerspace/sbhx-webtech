@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SB Hackerspace's Intro to Django</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///home/avb/.virtualenvs/django_landslide/local/lib/python2.7/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///home/avb/.virtualenvs/django_landslide/local/lib/python2.7/site-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///home/avb/.virtualenvs/django_landslide/local/lib/python2.7/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>SB Hackerspace's Intro to Django</h1></header>
+            
+            
+            <section><p>Presentator: AJ Bahnken
+Co-Presentator: Steve Phillips
+Presented: Jan 18, 2012 @ SB Hackerspace</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_notes">
+          <div class="inner">
+            
+            <header><h2>What I Hope to Accomplish Tonight</h2></header>
+            
+            
+            <section><p class="notes">teach ya</p>
+<ul>
+<li>Give you a basic overview of Django</li>
+<li>Get you started on your first Django Project/App</li>
+<li>Teach you some Django tricks</li>
+</ul>
+<h2>Things to note</h2>
+<ul>
+<li>This is only a basic introduction to Django.</li>
+<li>There are a lot of ways to do a single thing.</li>
+<li>I recommend looking at more than one Intro to Django tutorials.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_notes">
+          <div class="inner">
+            
+            <header><h2>What is Django?</h2></header>
+            
+            
+            <section><p>Django is a Web Framework written in the Python
+programming language. It uses the MVC Structure (kinda).
+It is also hugely built on the idea of being clean and promotes
+sticking to the DRY (Don't Repeat Yourself) philosophy.</p>
+<h2>What is a Web Framework?</h2>
+<p>frame·work  --  /ˈfrāmˌwərk/</p>
+<p>Noun: <br />
+    An essential supporting structure of a building, vehicle, or object.</p>
+<p>A Web Framework is a framework (obviously) with the
+purpose of supporting development of web sites and web
+apps.</p>
+<p class="notes">It helps eliminate bullshit dirty work</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Why 'MVC (kinda)' and WTF does MVC mean?</h2></header>
+            
+            
+            <section><p>MVC stands for 'Model View Controller', and it is
+an architectural pattern of software design. Django 
+does use this, but it is more commonly refered to as
+MTV, which stands for 'Model Template View'.</p>
+<p>This is because in a 'MVC', the 'View' controls 'what' and 'how'
+the data is displayed within the browser, in Django the 'Template'
+controls 'how', and the Views control 'what'.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Who's using Django?</h2></header>
+            
+            
+            <section><p>Some with a lot of traffic:</p>
+<ul>
+<li><a href="http://disqus.com/">Disqus</a> -- online discussion and commenting service for websites and online communities.</li>
+<li><a href="https://bitbucket.org/">Bitbucket</a> -- a web-based hosting service for projects that use either the Mercurial or Git revision control systems.</li>
+<li><a href="http://www.giantbomb.com/">Giant Bomb</a> -- (lame) Video Game Reviewing site</li>
+<li><a href="http://userecho.com/">User Echo</a> -- a site for user to owner communication. Feedback, etc.</li>
+<li><a href="http://www.theonion.com/">The Onion</a> -- greatest news network ever, of course.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Questions yo?</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Extra Tools Being Used</h2></header>
+            
+            
+            <section><h2>VirtualEnv</h2>
+<p>VirtualEnvWrapper allows you to setup a seperate
+enviorment for development and production so you can
+have different versions of softwares (such as Django)
+on one machine. This makes sure you don't break everything.</p>
+<h2>pip</h2>
+<p>pip is Python's packagemanager (Similar to apt-get, aptitude, pacman, etc).
+Its nothing special, but you should get used to using it. Tools such as search
+and freeze are really helpful and can be important.</p>
+<h2>My env</h2>
+<p>Just as a reference incase you are confused by my env, I am running Ubuntu 11.04,
+with awesome as my window manager, urxvt+byobu as my terminal emulator, and vim as my IDE.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>A Django project.</h2></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno">1</span> django-admin.py startproject <span class="s1">&#39;project_name&#39;</span>
+</pre></div>
+
+<h2>This generates a folder with:</h2>
+<h2>'<strong>init</strong>.py'</h2>
+<p>Makes the folder a package, which allows it to
+be callable within a terminal. Important.</p>
+<h2>manage.py</h2>
+<p>Controls a lot of the functionality of Django.
+This (and '<strong>init</strong>.py') you won't really have to touch.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Along with</h2></header>
+            
+            
+            <section><h2>urls.py</h2>
+<p>Controls URL declarations for your Django Project and each
+individual Django App. (As quoted from Django's official tutorial,
+"'Table of contents' of your Django-powered site"</p>
+<h2>setting.py</h2>
+<p>Settings for your Django Project. This is the main configuration
+file.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Quick note</h2></header>
+            
+            
+            <section><p>The 'T' in 'MTV' stands for 'Template', right?</p>
+<p>Well what this means is there is a seperate folder within your
+Django Project that will hold HTML templates. These HTML files
+are in essence the same as typical HTML files, but also include
+Django 'Template Tags'. </p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Let's take a look at the code...</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Two 'settings.py' tricks</h2></header>
+            
+            
+            <section><h2>Working Locally</h2>
+<p>A big thing with 'settings.py' is that all of the file paths
+are going to be specific to each machine. This throws A LOT of
+problems when multiple people are working on your Django Project/App.
+A great way of getting around this is...</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="lineno">2</span> <span class="n">PROJECT_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="s">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PROJECT_PATH</span><span class="p">,</span> <span class="s">&#39;db.sql&#39;</span><span class="p">),</span>
+</pre></div>
+
+<p>Another big problem when working on a Django Project locally vs server-side
+is specific settings that can break the site completely. A common one is SQLite3 vs
+MySQL/Postgres. Using a settings_local.py is really helpful for this.</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="k">try</span><span class="p">:</span>
+<span class="lineno">2</span>      <span class="kn">from</span> <span class="nn">settings_local</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Questions yo?</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>A Django App</h2></header>
+            
+            
+            <section><p>Once you have a Django Project created, you are
+going to wanna actually write an app, right?</p>
+<p>While you are in your folder:</p>
+<div class="highlight"><pre><span class="lineno">1</span> python manage.py startapp <span class="s1">&#39;app_name&#39;</span>
+</pre></div>
+
+<p>This will create a folder with</p>
+<ul>
+<li>'<strong>init</strong>.py'</li>
+<li>tests.py</li>
+</ul>
+<p>A file for creating and running unittests and doctests.
+(We probably won't cover this that much in this talk)</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Along with</h2></header>
+            
+            
+            <section><ul>
+<li>models.py</li>
+</ul>
+<p>Python Classes that outline and define what data
+will be stored. Basically your database layout.</p>
+<ul>
+<li>views.py</li>
+</ul>
+<p>The main functionality of your App. This utilizes each Model,
+along with determining what data is displayed.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Lets take a look at the code...</h1></header>
+            
+            
+            <section><p>--</p>
+<h1>Questions yo?</h1></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: intro_to_django.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>References</h1></header>
+            
+            
+            <section><ul>
+<li>https://docs.djangoproject.com/en/1.3/ </li>
+<li>http://en.wikipedia.org/wiki/Django</li>
+<li>http://jeffcroft.com/blog/2007/jan/11/django-and-mtv/</li>
+<li>http://www.djangosites.org/</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="intro_to_django.md">intro_to_django.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/17
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">SB Hackerspace's Intro to Django</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-2" class="sub">
+          <th><a href="#slide2">What I Hope to Accomplish Tonight</a></th>
+          <td><a href="#slide2">2</a></td>
+        </tr>
+        
+        <tr id="toc-row-3" class="sub">
+          <th><a href="#slide3">What is Django?</a></th>
+          <td><a href="#slide3">3</a></td>
+        </tr>
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">Why 'MVC (kinda)' and WTF does MVC mean?</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">Who's using Django?</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Questions yo?</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">Extra Tools Being Used</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">A Django project.</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">Along with</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+        <tr id="toc-row-10" class="sub">
+          <th><a href="#slide10">Quick note</a></th>
+          <td><a href="#slide10">10</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Let's take a look at the code...</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Two 'settings.py' tricks</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">Questions yo?</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">A Django App</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+        <tr id="toc-row-15" class="sub">
+          <th><a href="#slide15">Along with</a></th>
+          <td><a href="#slide15">15</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Lets take a look at the code...</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">References</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
